@@ -1,0 +1,61 @@
+.hero {
+  height: 500px;
+  background-image: linear-gradient(
+      rgba(255, 214, 231, 0.45),
+      rgba(255, 214, 231, 0.45)
+    ),
+    url("../../images/hero-cake.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__overlay {
+  width: 100%;
+}
+
+.hero__content {
+  max-width: 700px;
+  margin-left: 120px;
+}
+
+.hero__title {
+  font-size: 3.3rem;
+  color: rgb(255, 97, 189);
+  margin-bottom: 20px;
+    font-family: "Roboto Slab", serif;
+  font-weight: 700;
+}
+
+.hero__title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+}
+
+.hero__text {
+  font-family: "Inter", sans-serif;
+}
+
+.hero__description {
+  font-size: 1.2rem;
+  color: rgb(255, 97, 189);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero__button {
+  background: #f8afcb;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 40px;
+  font-size: 1rem;
+  transition: .3s;
+}
+
+.hero__button:hover {
+  background: #ec8db3;
+}

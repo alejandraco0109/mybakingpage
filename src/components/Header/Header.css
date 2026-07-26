@@ -1,0 +1,34 @@
+.header {
+  background: #ffd6e7;
+  padding: 18px 60px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.header__container {
+  max-width: 1300px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+}
+
+.header__logo {
+  font-size: 2rem;
+  color: #d65b91;
+}
+
+.header__subtitle {
+  color: #8b6474;
+  font-size: 0.9rem;
+}

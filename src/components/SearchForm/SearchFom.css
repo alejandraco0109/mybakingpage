@@ -1,0 +1,32 @@
+.search{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.search__input{
+    width:420px;
+    padding:18px 25px;
+    border-radius:50px;
+    border:none;
+    font-size:1rem;
+    outline:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.search__button{
+    padding:18px 38px;
+    border-radius:50px;
+    background:#f6a8c8;
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.search__button:hover{
+    background:#e98ab3;
+}

@@ -1,0 +1,32 @@
+.categories {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.categories__title {
+  font-size: 2rem;
+  color: #d65b91;
+  margin-bottom: 30px;
+}
+
+.categories__list {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.categories__button {
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #ffe5ef;
+  color: #7a5666;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.categories__button:hover {
+  background: #f6a8c8;
+  color: white;
+  transform: translateY(-3px);
+}

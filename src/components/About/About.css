@@ -1,0 +1,22 @@
+.about {
+  padding: 100px 20px;
+  background: #ffeef5;
+}
+
+.about__container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.about__title {
+  color: #d65b91;
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+}
+
+.about__text {
+  color: #6d5864;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
