@@ -1,10 +1,9 @@
 .hero {
-  height: 500px;
+  min-height: 500px;
   background-image: linear-gradient(
       rgba(255, 214, 231, 0.45),
       rgba(255, 214, 231, 0.45)
-    ),
-    url("../../images/hero-cake.jpg");
+    ), url("../../images/hero-image.jpg");
 
   background-size: cover;
   background-position: center;
@@ -12,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hero__overlay {
@@ -23,18 +23,22 @@
   margin-left: 120px;
 }
 
+.hero__welcome {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+}
+
 .hero__title {
   font-size: 3.3rem;
-  color: rgb(255, 97, 189);
+  color: rgb(255, 255, 255);
   margin-bottom: 20px;
     font-family: "Roboto Slab", serif;
   font-weight: 700;
 }
 
-.hero__title {
-  font-family: "Roboto Slab", serif;
-  font-weight: 700;
-}
+
 
 .hero__text {
   font-family: "Inter", sans-serif;
@@ -42,7 +46,7 @@
 
 .hero__description {
   font-size: 1.2rem;
-  color: rgb(255, 97, 189);
+  color: rgb(252, 252, 252);
   line-height: 1.6;
   margin-bottom: 30px;
 }
@@ -58,4 +62,27 @@
 
 .hero__button:hover {
   background: #ec8db3;
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    height: auto;
+    padding: 80px 20px 100px;
+  }
+
+  .hero__content {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 2.2rem;
+  }
+
+  .hero__description {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
 }
