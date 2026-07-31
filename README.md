@@ -86,11 +86,11 @@ https://www.themealdb.com/api/json/v1/1/search.php?s=cake
 
 ## 📸 Screenshots
 
-![alt text](image-1.png)
+![alt text](src/images/image.png)
 
-![alt text](image-2.png)
+![alt text](src/images/image-2.png)
 
-![alt text](image-3.png)
+![alt text](src/images/image-1.png)
 
 ## 👩‍💻 Author
 
