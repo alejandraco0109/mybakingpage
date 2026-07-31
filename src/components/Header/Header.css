@@ -32,3 +32,28 @@
   color: #8b6474;
   font-size: 0.9rem;
 }
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 18px 20px;
+  }
+
+  .header__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header__brand {
+    align-items: center;
+  }
+
+  .header__logo {
+    font-size: 1.7rem;
+  }
+
+  .header__subtitle {
+    font-size: 0.85rem;
+  }
+}
