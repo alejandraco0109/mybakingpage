@@ -36,6 +36,10 @@ src/
 └── main.jsx
 ```
 
+## 🌐 Live Demo
+
+https://alejandraco0109.github.io/mybakingpage
+
 ## 🚀 Installation
 
 Clone the repository:

@@ -2,21 +2,24 @@ import { useEffect } from "react";
 import "../RecipeModal/RecipeModal.css";
 
 function RecipeModal({ recipe, onClose }) {
-  if (!recipe) return null;
-
-useEffect(() => {
-  function handleEsc(event) {
-    if (event.key === "Escape") {
-      onClose();
+  useEffect(() => {
+    function handleEsc(event) {
+      if (event.key === "Escape" && recipe) {
+        onClose();
+      }
     }
-  }
 
-  document.addEventListener("keydown", handleEsc);
+    document.addEventListener("keydown", handleEsc);
 
-  return () => {
-    document.removeEventListener("keydown", handleEsc);
-  };
-}, [onClose]);
+    return () => {
+      document.removeEventListener(
+        "keydown",
+        handleEsc
+      );
+    };
+  }, [recipe, onClose]);
+
+  if (!recipe) return null;
 
   const ingredients = [];
 
@@ -54,7 +57,8 @@ useEffect(() => {
         <h2>{recipe.strMeal}</h2>
 
         <p>
-          <strong>Category:</strong> {recipe.strCategory}
+          <strong>Category:</strong>{" "}
+          {recipe.strCategory}
         </p>
 
         <p>

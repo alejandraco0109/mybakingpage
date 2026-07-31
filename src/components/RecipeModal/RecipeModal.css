@@ -27,6 +27,7 @@
   border-radius: 12px;
 }
 
+
 .modal__content {
   background: #fffafc;
   width: 90%;
@@ -41,9 +42,11 @@
 
   position: relative;
 
-  box-shadow: 0 15px 40px rgba(0,0,0,.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 
   animation: popup 0.35s ease;
+
+  scrollbar-gutter: stable;
 }
 
 .modal__image {
@@ -97,6 +100,14 @@
   transform: rotate(90deg);
 }
 
+.modal__content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal__content::-webkit-scrollbar-track {
+  margin: 20px 0;
+}
+
 @keyframes popup {
   from {
     transform: scale(.85);
@@ -118,3 +129,4 @@
     opacity: 1;
   }
 }
+

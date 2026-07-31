@@ -12,9 +12,11 @@ function Main({
 }) {
   return (
     <main>
-      <Hero onSearch={onSearch} />
+<Hero onSearch={onSearch} />
 
-      <Categories onSearch={onSearch} />
+<About />
+
+<Categories onSearch={onSearch} />
 
 <RecipeList
   recipes={recipes}
@@ -22,8 +24,6 @@ function Main({
   loading={loading}
   onOpenRecipe={onOpenRecipe}
 />
-
-      <About />
     </main>
   );
 }

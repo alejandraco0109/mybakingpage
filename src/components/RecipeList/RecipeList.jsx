@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../RecipeList/RecipeList.css";
 import RecipeCard from "../RecipeCard/RecipeCard";
 
@@ -9,10 +9,6 @@ function RecipeList({
   onOpenRecipe,
 }) {
   const [visibleRecipes, setVisibleRecipes] = useState(3);
-
-  useEffect(() => {
-    setVisibleRecipes(3);
-  }, [recipes]);
 
   if (loading) {
     return (
@@ -62,7 +58,7 @@ function RecipeList({
         <button
           className="recipes__show-more"
           onClick={() =>
-            setVisibleRecipes(visibleRecipes + 3)
+            setVisibleRecipes((prev) => prev + 3)
           }
         >
           Show More 🍰
