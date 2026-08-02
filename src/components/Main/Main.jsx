@@ -10,21 +10,24 @@ function Main({
   loading,
   onOpenRecipe,
 }) {
-  return (
-    <main>
-<Hero onSearch={onSearch} />
 
-<About />
+return (
+  <main>
+    <Hero onSearch={onSearch} />
 
-<Categories onSearch={onSearch} />
+    <Categories onSearch={onSearch} />
 
-<RecipeList
-  recipes={recipes}
-  noResults={noResults}
-  loading={loading}
-  onOpenRecipe={onOpenRecipe}
-/>
-    </main>
+  <section id="recipes">
+  <RecipeList
+    recipes={recipes}
+    noResults={noResults}
+    loading={loading}
+    onOpenRecipe={onOpenRecipe}
+  />
+</section>
+
+    <About />
+  </main>
   );
 }
 export default Main;

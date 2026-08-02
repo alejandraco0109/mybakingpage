@@ -2,6 +2,27 @@ import { NavLink } from "react-router-dom";
 import "../Navigation/Navigation.css";
 
 function Navigation() {
+
+  function scrollToRecipes() {
+    const recipes = document.getElementById("recipes");
+
+    if (recipes) {
+      recipes.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }
+
+  function scrollToAbout() {
+    const about = document.getElementById("about");
+
+    if (about) {
+      about.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }
+
   return (
     <nav className="navigation">
       <ul className="navigation__list">
@@ -10,11 +31,15 @@ function Navigation() {
         </li>
 
         <li>
-          <NavLink to="/recipes">Recetas</NavLink>
+          <button onClick={scrollToRecipes}>
+            Recetas
+          </button>
         </li>
 
         <li>
-          <a href="#about">Sobre nosotros</a>
+          <button onClick={scrollToAbout}>
+            Sobre nosotros
+          </button>
         </li>
       </ul>
     </nav>

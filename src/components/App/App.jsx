@@ -1,5 +1,5 @@
-import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -14,30 +14,43 @@ function App() {
   const [noResults, setNoResults] = useState(false);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [loading, setLoading] = useState(false);
+  const location = useLocation();
 
-  function handleSearch(searchTerm) {
-    setLoading(true);
+   useEffect(() => {
+    if (window.location.hash === "#about") {
+      const aboutSection = document.getElementById("about");
 
-    searchRecipes(searchTerm)
-      .then((data) => {
-        setLoading(false);
+      if (aboutSection) {
+        aboutSection.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [location]);
 
-        if (data.meals) {
-          setRecipes(data.meals);
-          setNoResults(false);
-        } else {
-          setRecipes([]);
-          setNoResults(true);
-        }
-      })
-      .catch((err) => {
-        console.error(err);
 
-        setLoading(false);
+ function handleSearch(searchTerm) {
+  setLoading(true);
+
+  searchRecipes(searchTerm)
+    .then((data) => {
+      if (data.meals) {
+        setRecipes(data.meals);
+        setNoResults(false);
+      } else {
         setRecipes([]);
         setNoResults(true);
-      });
-  }
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      setRecipes([]);
+      setNoResults(true);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+}
 
   function handleOpenRecipe(recipe) {
     setSelectedRecipe(recipe);
