@@ -144,11 +144,12 @@
   }
 
   .modal__image {
-    width: calc(100% + 40px);
-    margin: -20px -20px 20px;
-    display: block;
-    border-radius: 20px 20px 0 0;
-  }
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  object-fit: cover;
+}
 
   .modal h2 {
     font-size: 1.4rem;
