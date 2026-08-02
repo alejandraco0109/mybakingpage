@@ -28,6 +28,18 @@ function App() {
     }
   }, [location]);
 
+  useEffect(() => {
+  searchRecipes("cake")
+    .then((data) => {
+      if (data.meals) {
+        setRecipes(data.meals.slice(0, 3));
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}, []);
+
 
  function handleSearch(searchTerm) {
   setLoading(true);
