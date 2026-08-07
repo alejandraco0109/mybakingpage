@@ -14,6 +14,7 @@ function App() {
   const [noResults, setNoResults] = useState(false);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [apiError, setApiError] = useState(false);
   const location = useLocation();
 
    useEffect(() => {
@@ -43,21 +44,25 @@ function App() {
 
  function handleSearch(searchTerm) {
   setLoading(true);
+  setApiError(false);
 
   searchRecipes(searchTerm)
     .then((data) => {
       if (data.meals) {
         setRecipes(data.meals);
         setNoResults(false);
+        setApiError(false);
       } else {
         setRecipes([]);
         setNoResults(true);
+        setApiError(false);
       }
     })
     .catch((err) => {
       console.error(err);
       setRecipes([]);
       setNoResults(true);
+      setApiError(true);
     })
     .finally(() => {
       setLoading(false);
@@ -84,6 +89,7 @@ function App() {
               onSearch={handleSearch}
               recipes={recipes}
               noResults={noResults}
+              apiError={apiError}
               loading={loading}
               onOpenRecipe={handleOpenRecipe}
             />
@@ -96,6 +102,7 @@ function App() {
             <RecipeList
               recipes={recipes}
               noResults={noResults}
+              apiError={apiError}
               loading={loading}
               onOpenRecipe={handleOpenRecipe}
             />

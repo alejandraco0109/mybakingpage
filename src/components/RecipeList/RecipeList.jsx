@@ -5,6 +5,7 @@ import RecipeCard from "../RecipeCard/RecipeCard";
 function RecipeList({
   recipes,
   noResults,
+  apiError,
   loading,
   onOpenRecipe,
 }) {
@@ -21,6 +22,20 @@ function RecipeList({
       </section>
     );
   }
+
+if (apiError) {
+  return (
+    <section className="recipes">
+      <h2 className="recipes__title">
+        Unable to connect
+      </h2>
+
+      <p className="recipes__empty">
+        We couldn't connect to the recipe service. Please check your internet connection and try again.
+      </p>
+    </section>
+  );
+}
 
   if (noResults) {
     return (

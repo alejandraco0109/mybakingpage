@@ -7,6 +7,7 @@ function Main({
   onSearch,
   recipes,
   noResults,
+  apiError,
   loading,
   onOpenRecipe,
 }) {
@@ -21,6 +22,7 @@ return (
   <RecipeList
     recipes={recipes}
     noResults={noResults}
+    apiError={apiError}
     loading={loading}
     onOpenRecipe={onOpenRecipe}
   />

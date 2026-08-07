@@ -20,6 +20,7 @@ function SearchForm({ onSearch }) {
         placeholder="Search your favorite dessert..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        required
       />
 
       <button
